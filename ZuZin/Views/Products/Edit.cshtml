@@ -1,0 +1,27 @@
+﻿@model ZuZin.Models.Product
+
+<div style="padding:40px;margin-top:50px;background-color:antiquewhite;">
+    <h2>Sửa sản phẩm</h2>
+
+    <form asp-action="Edit" method="post">
+        <input type="hidden" asp-for="ProductId" />
+        <div class="form-group">
+            <label>Tên sản phẩm</label>
+            <input asp-for="Name" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Giá</label>
+            <input asp-for="Price" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Mô tả</label>
+            <textarea asp-for="Description" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+            <label>Hình ảnh</label>
+            <input asp-for="Image" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary">Lưu</button>
+    </form>
+</div>
+

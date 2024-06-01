@@ -1,0 +1,31 @@
+﻿@model ZuZin.Models.Product
+
+<div style="padding:20px;margin-top:50px;background-color:antiquewhite;">
+    <div class="container">
+        <div class="row">
+            <div style="background-color:aliceblue;padding:30px;">
+                <div style="border-color:aqua;">
+                    <img src="@Model.Image" style="width:200px;height:200px;"
+                         alt="Website Builder">
+                </div>
+                <br>
+                <div>
+                    <h4>
+                        <strong> Sản phẩm : @Model.Name</strong>
+                    </h4>
+                    <p>
+                        Note : @Model.Description
+                    </p>
+                    <div>
+                        <span>Giá : @Model.Price.ToString("c")</span>
+                    </div>
+                    <div>
+                        <a class="btn btn-primary display-4" asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-pId="#">
+                            <span class="mbrib-cart-add mbr-iconfont mbr-iconfontbtn"></span>Mua Ngay&nbsp;
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

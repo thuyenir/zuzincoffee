@@ -1,0 +1,12 @@
+﻿@model ZuZin.Models.Product
+
+<div style="padding:40px;margin-top:50px;background-color:antiquewhite;">
+    <h2>Xóa sản phẩm</h2>
+
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="ProductId" />
+        <p>Bạn có chắc muốn xóa sản phẩm "@Model.Name"?</p>
+        <button type="submit" class="btn btn-danger">Xóa</button>
+    </form>
+</div>
+

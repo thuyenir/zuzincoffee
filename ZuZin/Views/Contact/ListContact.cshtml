@@ -1,0 +1,24 @@
+﻿@model IEnumerable<ZuZin.Models.Contact>
+<div style="padding:40px;margin-top:50px;background-color:antiquewhite;">
+    <h2>Danh sách phản hồi của khách hàng</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Tên</th>
+                <th>Email</th>
+                <th>Thông điệp</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model)
+            {
+                <tr>
+                    <td>@product.Name</td>
+                    <td>@product.Email</td>
+                    <td>@product.Message</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
